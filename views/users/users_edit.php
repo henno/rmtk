@@ -32,17 +32,17 @@
     <!-- CANCEL -->
     <button class="btn btn-default"
             onclick="window.location.href = 'users/view/<?= $user['user_id'] ?>/<?= $user['username'] ?>'">
-        Cancel
+        Tühista
     </button>
 
     <!-- DELETE -->
     <button class="btn btn-danger" onclick="delete_user(<?= $user['user_id'] ?>)">
-        Delete
+        Kustuta
     </button>
 
     <!-- SAVE -->
     <button class="btn btn-primary" onclick="$('#form').submit()">
-        Save
+        Salvesta
     </button>
 
 </div>

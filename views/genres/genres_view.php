@@ -1,21 +1,21 @@
-<h1>Module '<?= $module['module_name'] ?>'</h1>
+<h1>Žanr '<?= $genre['genre_name'] ?>'</h1>
 <table class="table table-bordered">
 
     <tr>
-        <th>Module ID</th>
-        <td><?= $module['module_id'] ?></td>
+        <th>Genre ID</th>
+        <td><?= $genre['genre_id'] ?></td>
     </tr>
 
     <tr>
-        <th>Module name</th>
-        <td><?= $module['module_name'] ?></td>
+        <th>Genre name</th>
+        <td><?= $genre['genre_name'] ?></td>
     </tr>
 
 </table>
 
 <!-- EDIT BUTTON -->
 <? if ($auth->is_admin): ?>
-    <form action="modules/edit/<?= $module['module_id'] ?>">
+    <form action="genres/edit/<?= $genre['genre_id'] ?>">
         <div class="pull-right">
             <button class="btn btn-primary"> Muuda</button>
         </div>

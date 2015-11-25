@@ -4,12 +4,12 @@
         You are not an administrator.
     </div>
     <? exit(); endif; ?>
-<h1>module '<?= $module['module_name'] ?>'</h1>
+<h1>genre '<?= $genre['genre_name'] ?>'</h1>
 <form id="form" method="post">
     <table class="table table-bordered">
         <tr>
-            <th>modulename</th>
-            <td><input type="text" name="data[module_name]" value="<?= $module['module_name'] ?>"/></td>
+            <th>genrename</th>
+            <td><input type="text" name="data[genre_name]" value="<?= $genre['genre_name'] ?>"/></td>
         </tr>
     </table>
 </form>
@@ -19,12 +19,12 @@
 
     <!-- CANCEL -->
     <button class="btn btn-default"
-            onclick="window.location.href = 'modules/view/<?= $module['module_id'] ?>/<?= $module['modulename'] ?>'">
+            onclick="window.location.href = 'genres/view/<?= $genre['genre_id'] ?>/<?= $genre['genrename'] ?>'">
         Tühista
     </button>
 
     <!-- DELETE -->
-    <button class="btn btn-danger" onclick="delete_module(<?= $module['module_id'] ?>)">
+    <button class="btn btn-danger" onclick="delete_genre(<?= $genre['genre_id'] ?>)">
         Kustuta
     </button>
 
@@ -39,10 +39,10 @@
 <!-- JAVASCRIPT
 ==============================================================================-->
 <script type="application/javascript">
-    function delete_module() {
-        $.post('<?=BASE_URL?>modules/delete', {module_id: <?= $module['module_id'] ?>}, function (response) {
-            if(response == 'Ok'){
-                window.location.href = '<?=BASE_URL?>modules';
+    function delete_genre() {
+        $.post('<?=BASE_URL?>genres/delete', {genre_id: <?= $genre['genre_id'] ?>}, function (response) {
+            if (response == 'Ok') {
+                window.location.href = '<?=BASE_URL?>genres';
             }
         })
     }
